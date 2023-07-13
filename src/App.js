@@ -58,6 +58,7 @@ import List from './list';
 import axios from 'axios';
 import {useState, useEffect} from 'react';
 import "./styles.css";
+import PopUp from './popUp';
 
 function App() {
   // !백에서 받아오기
@@ -74,17 +75,16 @@ function App() {
   useEffect(getPosts, []);
 
   // !팝업창
-  const [showPopup, setShowPopup] = useState(false);
+  // const [showPopup, setShowPopup] = useState(false);
 
-  const togglePopup = () => {
-    if (showPopup===false){
-      setShowPopup(true)
-    }
-    else{
-      setShowPopup(false)
-    }
-  };
-
+  // const togglePopup = () => {
+  //   if (showPopup===false){
+  //     setShowPopup(true)
+  //   }
+  //   else{
+  //     setShowPopup(false)
+  //   }
+  // };
 
   return (
     <div>
@@ -93,19 +93,9 @@ function App() {
           <button>확인</button>
         </div>
         <div className='menu'>
-          <button className="open" onClick={togglePopup}>ADD</button>
-          {showPopup ? (
-            <div className="popup">
-              <div className="popup_inner">
-                <h2>Success!</h2>
-                <button className="close" onClick={togglePopup}>
-                  Close me
-                </button>
-              </div>
-            </div>
-          ) : null}
+          <PopUp text={"ADD"}/>
+          <PopUp text={"appTest"}/>
 
-              <button className='appTest'>App Test</button>
         </div>
         <div>
           <List items={posts}/>
