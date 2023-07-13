@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import "./styles.css"
 import Item from './item';
 function List({items}){
@@ -15,6 +15,7 @@ function List({items}){
               <th>regdate</th>
               <th colspan="3">action</th>
             </tr>
+            
           {
               items.map((item)=>
                   <Item item = {item}/> 

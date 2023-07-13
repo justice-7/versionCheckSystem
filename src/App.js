@@ -33,12 +33,10 @@ export default App;
 
 
 import './App.css';
-import List from './list';
 import axios from 'axios';
 import {useState, useEffect} from 'react';
 import "./styles.css";
-import PopAdd from './popAdd';
-import PopAppTest from './popAppTest';
+import ServiceName from './serviceName';
 
 
 function App() {
@@ -49,25 +47,16 @@ function App() {
     axios
       .get('http://3.36.74.212:8080/api/latest/versions')  //axios를 통해 HTTP요청을 보내는 코드
       .then((response)=>{ //then()에서는 HTTP요청을 통해 받아온 데이터를 처리할 수 있다
-        //console.log(response)
         setPosts(response.data); // 이전에 useState으로 생성했던 setPosts함수를 통해 data를 posts에 저장합니다.
       })
   }
   useEffect(getPosts, []);
 
+
   return (
     <div>
-        <div className='service'>
-          <input type="text" placeholder="서비스명"></input>
-          <button>확인</button>
-        </div>
-        <div className='menu'>
-          <PopAdd text={"ADD"}/>
-          <PopAppTest text={"App Test"}/>
-        </div>
-        <div>
-          <List items={posts}/>
-        </div>
+        <ServiceName text=''/>
+      
       
     </div>
   );
