@@ -1,4 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
+import "./styles.css"
+import Del from "./bDel";
+import Modi from "./bModi";
+import Test from "./bTest";
+
 function Item({item}){
     return (
       <tr>
@@ -10,9 +15,9 @@ function Item({item}){
         <td>{item.package_name}</td>
         <td>{item.regdate}</td>
         
-        <td><button>Test</button></td>
-        <td><button>수정</button></td>
-        <td><button>삭제</button></td>
+        <Test text={"TEST"}/>
+        <Modi text={"수정"}/>
+        <Del text={"삭제"}/>
         
       </tr>
         

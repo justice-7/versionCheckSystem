@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
+import "./styles.css"
 import Item from './item';
 function List({items}){
     return (
       <div>
-        <table>
-            <tr>
+        <table id='tables'>
+            <tr id='lists'>
               <th>idx</th> 
               <th>os</th>
               <th>ver</th>

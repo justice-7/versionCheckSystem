@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import "./styles.css";
 
-function PopUp(name){
+function Del(name){
   const [showPopup, setShowPopup] = useState(false);
 
   const togglePopup = () => {
@@ -15,14 +15,13 @@ function PopUp(name){
 
   return (
     <span>
-      <button className="open" onClick={togglePopup}>{name.text}</button>
+      <button id='test' onClick={togglePopup}>{name.text}</button>
       {showPopup ? (
         <div className="popup">
           <div className="popup_inner">
-            <h2>Success!</h2>
-            <button className="close" onClick={togglePopup}>
-              Close me
-            </button>
+              <textarea name="testMsg"></textarea><br></br>
+              <input type='submit' value='확인'></input>
+            <button className="close" onClick={togglePopup}>확인</button>
           </div>
         </div>
       ) : null}
@@ -30,4 +29,4 @@ function PopUp(name){
   );
 }
 
-export default PopUp;
+export default Del;

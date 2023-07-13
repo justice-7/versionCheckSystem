@@ -1,24 +1,3 @@
-// import React, {useEffect, useState} from 'react';
-// import axios from 'axios';
-
-// function App() {
-//    const [hello, setHello] = useState('')
-
-//     useEffect(() => {
-//         axios.get('http://3.36.74.212:8080/api/test')
-//         .then(response => setHello(response.data))
-//         .catch(error => console.log(error))
-//     }, []);
-
-//     return (
-//         <div>
-//             백엔드에서 가져온 데이터입니다 : {hello}
-//         </div>
-//     );
-// }
-
-// export default App;
-
 /*
 import logo from './logo.svg';
 import './App.css';
@@ -58,7 +37,9 @@ import List from './list';
 import axios from 'axios';
 import {useState, useEffect} from 'react';
 import "./styles.css";
-import PopUp from './popUp';
+import PopAdd from './popAdd';
+import PopAppTest from './popAppTest';
+
 
 function App() {
   // !백에서 받아오기
@@ -74,18 +55,6 @@ function App() {
   }
   useEffect(getPosts, []);
 
-  // !팝업창
-  // const [showPopup, setShowPopup] = useState(false);
-
-  // const togglePopup = () => {
-  //   if (showPopup===false){
-  //     setShowPopup(true)
-  //   }
-  //   else{
-  //     setShowPopup(false)
-  //   }
-  // };
-
   return (
     <div>
         <div className='service'>
@@ -93,9 +62,8 @@ function App() {
           <button>확인</button>
         </div>
         <div className='menu'>
-          <PopUp text={"ADD"}/>
-          <PopUp text={"appTest"}/>
-
+          <PopAdd text={"ADD"}/>
+          <PopAppTest text={"App Test"}/>
         </div>
         <div>
           <List items={posts}/>
