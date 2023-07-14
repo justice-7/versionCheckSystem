@@ -3,20 +3,19 @@ import "./styles.css"
 import Del from "./bDel";
 import Modi from "./bModi";
 import Test from "./bTest";
-import ServiceName from './serviceName';
 
 
 function Item({item}){
-  <ServiceName item={item}></ServiceName>
   return (
-      <tr>
+      <tr className='color'>
         <td>{item.idx}</td>
+        <td>{item.service_name}</td>
         <td>{item.os}</td>
         <td>{item.version}</td>
         <td>{item.update_type.toString()}</td>
         <td>{item.message}</td>
         <td>{item.package_name}</td>
-        <td>{item.regdate}</td>
+        <td>{item.regdate.toString().substring(0,19)}</td>
         
         <Test item={item}/>
         <Modi item={item}/>

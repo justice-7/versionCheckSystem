@@ -41,7 +41,6 @@ function PopUp(name){
  
 
   const handleSubmit=(e)=>{
-    e.preventDefault();
 
     const addForm=new FormData(document.querySelector("#addForm"));
 
@@ -76,7 +75,7 @@ function PopUp(name){
   
   return (
     <span>
-      <button className="open" onClick={togglePopup}>{name.text}</button>
+      <button className="add" onClick={togglePopup}>{name.text}</button>
       {showPopup ? (
         <div className="popup">
           <div className="popup_inner">
@@ -94,8 +93,6 @@ function PopUp(name){
               </select><br></br>
               <textarea name="message"></textarea><br></br>
               <input type='submit' value='확인'></input>
-              
-              <input type="text" name="package_name"/><br></br> 
             </form>
             <button className="close" onClick={togglePopup}>취소</button>
           </div>

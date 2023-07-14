@@ -15,7 +15,6 @@ function Modi({item}){
 
 
   const handleSubmit=(e)=>{
-    e.preventDefault();
 
     const updateForm=new FormData(document.querySelector("#updateForm"));
 

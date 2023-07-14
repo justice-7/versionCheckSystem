@@ -7,6 +7,7 @@ function List({items}){
         <table id='tables'>
             <tr id='lists'>
               <th>idx</th> 
+              <th>serviceName</th>
               <th>os</th>
               <th>ver</th>
               <th>updatetype</th>
@@ -15,12 +16,11 @@ function List({items}){
               <th>regdate</th>
               <th colspan="3">action</th>
             </tr>
-            
-          {
-              items.map((item)=>
-                  <Item item = {item}/> 
-              )
-          }
+              {
+                  items.map((item)=>
+                      <Item item = {item}/> 
+                  )
+              }
         </table>
       </div>
     );
