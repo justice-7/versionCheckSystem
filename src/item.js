@@ -7,7 +7,7 @@ import Test from "./bTest";
 
 function Item({item}){
   return (
-      <tr className='color'>
+      <tr classsName='color'>
         <td>{item.idx}</td>
         <td>{item.service_name}</td>
         <td>{item.os}</td>

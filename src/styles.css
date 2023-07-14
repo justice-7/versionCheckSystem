@@ -144,19 +144,14 @@ th, td, tr {
 }
 
 tr.color:nth-child(even){
-
   background-color:#DDEBF7;
-
   color:#000000;
 
 }
 
 tr.color:nth-child(odd){
-
   background-color:#ededed;
-
   color:#000000;
-
 }
 
 #test {
